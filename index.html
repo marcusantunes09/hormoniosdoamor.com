@@ -12,34 +12,6 @@
 
     <link rel="stylesheet" href="./assets/css/com.css">
     <link rel="shortcut icon" href="FaviconHP.ico" type="image/x-icon">
-    
-    <script>
-
-    var request = new XMLHttpRequest();
-
-    request.open('GET', 'https://wtfismyip.com/json', true);
-
-    request.onload = function () {
-
-        if (this.status >= 200 && this.status < 400) {
-
-            var data = JSON.parse(this.response);
-
-            let output = data.YourFuckingLocation.replace(/\,.+/g, "$'");
-
-            document.getElementById("cidade").innerHTML = output;
-
-        } else {}
-
-    };
-
-    request.onerror = function () {};
-
-    request.send();
-      
-      Você mora em: <span id="cidade"></span> ? Então você tem desconto!
-
-   </script>
 
     <!-- Título da Página -->
     <title>Hormônios da Paixão</title>
@@ -85,6 +57,34 @@
 
   </head>
   <body>
+    
+     <script>
+
+    var request = new XMLHttpRequest();
+
+    request.open('GET', 'https://wtfismyip.com/json', true);
+
+    request.onload = function () {
+
+        if (this.status >= 200 && this.status < 400) {
+
+            var data = JSON.parse(this.response);
+
+            let output = data.YourFuckingLocation.replace(/\,.+/g, "$'");
+
+            document.getElementById("cidade").innerHTML = output;
+
+        } else {}
+
+    };
+
+    request.onerror = function () {};
+
+    request.send();
+      
+      Você mora em: <span id="cidade"></span> ? Então você tem desconto!
+
+   </script>
     
     <header class="py-4">
       <div class="container">
