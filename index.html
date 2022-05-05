@@ -27,9 +27,15 @@
         background-blend-mode: darken;
       }
 
-      @media screen and (max-width: 600px) {
+     /*============================================================================== 
+iPhone X || 375 x 812 || Default, Portrait and Landscape
+================================================================================ */
+@media only screen and (min-width: 375px) 
+and (max-width: 812px){ 
+    .test-class{display: none !important; visibility: hidden !important;}
+} {
         body {
-          background-image: url("assets/img/FundoCelularHP1.jpg");
+          background-image: url("assets/img/BG.HP.IPHONE.X.jpg");
           background-color: rgba(0, 0, 0, 0.6);
           background-position: center;
           background-size: cover;
